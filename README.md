@@ -82,4 +82,6 @@ Clark, Stephen, and James R. Curran. "Parsing the WSJ using CCG and log-linear m
 
 Kogkalidis, Konstantinos, Michael Moortgat, and Richard Moot. "Neural Proof Nets." Proceedings of the 24th Conference on Computational Natural Language Learning. 2020.
 
+Kogkalidis, Konstantinos, Michael Moortgat, and Richard Moot. "SPINDLE: Spinning Raw Text into Lambda Terms with Graph Attention." Proceedings of the 17th Conference of the European Chapter of the Association for Computational Linguistics: System Demonstrations. 2023.
+
 Moot, Richard. "Type-logical investigations: proof-theoretic, computational and linguistic aspects of modern type-logical grammars." (2021).
