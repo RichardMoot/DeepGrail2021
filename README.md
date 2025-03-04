@@ -1,20 +1,27 @@
 # DeepGrail 2021
 
-This part-of-speech tagger and supertagger has been developed as part of my Habilitation (Moot 2021). The file `requirements.txt` lists the Python dependencies.
-
-You will need to download the French language model from ELMoForManyLangs for this code as well. 
-
-https://github.com/HIT-SCIR/ELMoForManyLangs
-
-## Installation
-
-You will need to change the directories in the file `super.py` for this script to function. There are two places this is necessary. The first is before the model and pickle files are loaded (add the filepath in your system to the line `os.chdir`), and the second is to ensure the ELMo model can be found (add the filepath to the line `e = Embedder`).
-
 ## Depracation warning
 
 This code is mainly preserved for historical reasons. For modern applications, I recommend the completely rebuilt version using BERT/Transformers instead of ELMo/LSTM. This gives a full parser and much more accurate supertagger.
 
 https://www.ins2i.cnrs.fr/fr/deepgrail
+
+## About this software
+
+These are the part-of-speech tagger and supertagger for the French language which have been developed as part of my Habilitation (Moot 2021). They have been trained on the data from the French TLGbank. The supertagger therefore assigns formulas in multimodal type-logical grammars to arbitrary French text.
+
+The supertagger is intended for use with the GrailLight https://github.com/RichardMoot/GrailLight parser, but can be integrated in with a neural supertagger in the style of Kogkalidis, Moortgat and Moot (2020) as well.
+
+## Installation
+
+The file `requirements.txt` lists the Python dependencies.
+
+You will need to download the French language model from ELMoForManyLangs for this code. 
+
+https://github.com/HIT-SCIR/ELMoForManyLangs
+
+You will need to change the directories in the file `super.py` for this script to function. There are two places this is necessary. The first is before the model and pickle files are loaded (add the filepath in your system to the line `os.chdir`), and the second is to ensure the ELMo model can be found (add the filepath to the line `e = Embedder`).
+
 
 ## Usage
 
@@ -27,7 +34,7 @@ https://www.ins2i.cnrs.fr/fr/deepgrail
 
 ## Output format
 
-The output format has been chosen to be compatible with the format of the old Clark and Curran supertaggers. Each sentence is one line, words are separated by space, and each supertagged word is of the following form.
+The output format has been chosen to be compatible with the format of the old Clark and Curran (2004) supertaggers. Each sentence is one line, words are separated by space, and each supertagged word is of the following form.
 
 `Word|POS1-POS2|N|Form1|Prob1|...|FormN|ProbN`
 
@@ -70,5 +77,9 @@ The included model has the following accuracies
 
 
 #### References
+
+Clark, Stephen, and James R. Curran. "Parsing the WSJ using CCG and log-linear models." Proceedings of the 42nd Annual Meeting of the Association for Computational Linguistics (ACL-04). 2004.
+
+Kogkalidis, Konstantinos, Michael Moortgat, and Richard Moot. "Neural Proof Nets." Proceedings of the 24th Conference on Computational Natural Language Learning. 2020.
 
 Moot, Richard. "Type-logical investigations: proof-theoretic, computational and linguistic aspects of modern type-logical grammars." (2021).
