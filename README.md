@@ -1,5 +1,9 @@
 # DeepGrail 2021
 
+:copyright: 2020-2025 [CNRS](http://www.cnrs.fr)
+
+:copyright: 2020-2025 Richard Moot (@RichardMoot)
+
 ## Depracation warning
 
 This code is mainly preserved for historical reasons. For modern applications, I recommend the completely rebuilt version using BERT/Transformers instead of ELMo/LSTM. This gives a full parser and much more accurate supertagger.
