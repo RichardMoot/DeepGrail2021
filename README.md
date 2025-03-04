@@ -6,6 +6,10 @@ You will need to download the French language model from ELMoForManyLangs for th
 
 https://github.com/HIT-SCIR/ELMoForManyLangs
 
+## Installation
+
+You will need to change the directories in the file `super.py` for this script to function. There are two places this is necessary. The first is before the model and pickle files are loaded (add the filepath in your system to the line `os.chdir`), and the second is to ensure the ELMo model can be found (add the filepath to the line `e = Embedder`).
+
 ## Depracation warning
 
 This code is mainly preserved for historical reasons. For modern applications, I recommend the completely rebuilt version using BERT/Transformers instead of ELMo/LSTM. This gives a full parser and much more accurate supertagger.
